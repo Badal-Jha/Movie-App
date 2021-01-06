@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(25, 22, 27);
+}
+.container {
+  display: flex;
+  font-family: "Ubuntu", sans-serif;
+  justify-content: space-evenly;
+}
+.container img {
+  margin-top: 10px;
+  margin-right: 40px;
+  border-radius: 40px;
+  width: 70px;
+  height: 70px;
+}
+.container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.container ul li {
+  letter-spacing: 2px;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.container ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  margin: 20px;
+
+  color: white;
+}
+
+.container ul li a:hover {
+  color: rgb(128, 41, 0);
+  border-bottom: 2px solid red;
+}
+.header-input {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.header-input input {
+  outline: none;
+}
+.main {
+  display: flex;
+}
+.main .first {
+  margin: 70px;
+  /* border: 2px solid red; */
+  width: 690px;
+  height: 300px;
+}
+#search {
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 8px;
+  outline: none;
+  width: 400px;
+  height: 24px;
+}
+#btn {
+  background-color: rgb(39, 43, 44);
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  margin-top: 5px;
+  color: white;
+  height: 20px;
+  box-shadow: 0 4px #312e2e;
+}
+.main h1 {
+  font-size: 45px;
+  margin: 0;
+  color: white;
+  font-family: "Abril Fatface", cursive;
+}
+.main p {
+  color: white;
+  font-size: 22px;
+  font-family: "Redressed", cursive;
+}
+.poster {
+  border-radius: 5px;
+  margin: 70px;
+  padding: 0;
+  width: 600px;
+  height: 300px;
+}
+
+.second {
+  border-radius: 5px;
+  padding: 0;
+  opacity: 0.9;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0 3rem 3rem rgba(70, 69, 69, 0.3);
+}
+.second img {
+  padding: 0;
+  border-radius: 5px;
+  width: 600px;
+  height: 300px;
+}
+.section {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+.section img {
+  /* position: relative; */
+  cursor: pointer;
+  margin: 20px;
+  width: 280px;
+}
+.section img:hover {
+  margin: 0 20px;
+  /* increase the size of image without affecting others */
+  transform: scale(1.2);
+  /* transform: rotateY(180deg); to rotate image 180 degree */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.content {
+  border: 2px solid;
+
+  display: none;
+}
+.content div {
+  margin: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content div iframe {
+  margin: 10px;
+  border: 0.1px solid rgb(11, 11, 17);
+  border-radius: 10px;
+  box-shadow: 0 3rem 3rem rgba(2, 2, 2, 0.3);
+}
+.close-btn {
+  cursor: pointer;
+}
+.display {
+  display: block;
+}
+#title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Pirata One", cursive;
+  font-size: 30px;
+  color: white;
+}

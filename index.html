@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Redressed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html"><img src="joker2.jpg" alt="" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Latest </a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Your Watchlist</a></li>
+        </ul>
+        <div class="header-input">
+          <input
+            type="text"
+            placeholder="Search in website"
+            autocomplete="off"
+          />
+          <input type="submit" value="Search" />
+        </div>
+
+        <!-- <input type="text" class="inp" placeholder="search"> -->
+      </nav>
+    </header>
+    <div class="main">
+      <div class="first">
+        <h1>Discover Movies & TV Shows</h1>
+        <p>
+          Get personal recommendations and see what’s new across your favorite
+          streaming services.Keep track of all the TV shows and movies you want
+          to watch in one list across all your devices
+        </p>
+        <input
+          type="text"
+          id="search"
+          class="movieSearch"
+          autocomplete="off"
+          placeholder="Search for Movies"
+        />
+        <div>
+          <input type="submit" value="Search" id="btn" />
+        </div>
+      </div>
+      <button class="poster">
+        <div class="second">
+          <img src="quote-1.jpg" alt="" class="quotes" />
+        </div>
+      </button>
+    </div>
+    <div id="movie-searchable"></div>
+    <div id="movieContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
