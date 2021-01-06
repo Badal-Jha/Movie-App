@@ -14,7 +14,7 @@ poster.addEventListener("mouseenter", (e) => {
   const quote = document.querySelector(".quotes");
   const val = Math.trunc(Math.random() * 9) + 1;
   console.log(val);
-  quote.src = "quote-" + val + ".jpg";
+  quote.src = "images/quote-" + val + ".jpg";
 });
 
 //selecting elements
