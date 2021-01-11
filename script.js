@@ -58,6 +58,7 @@ function moviesSection(movies) {
       <p><span class="movieInfo">Popularity: </span>${movie.popularity}</p>
        <p><span class="movieInfo">Rating: </span>${movie.vote_average}</p>
       
+      
 
       </div>`;
   });
@@ -123,7 +124,7 @@ function createIfram(video) {
 }
 
 function videoTemplate(data, content) {
-  // content.innerHTML = `<button class="close-btn">X</button>`; //overwrite everthing each time we click a video
+  content.innerHTML = `<button class="close-btn">X</button>`; //overwrite everthing each time we click a video
   console.log("videos", data);
   const videos = data.results;
   const length = videos.length > 4 ? 4 : videos.length;
