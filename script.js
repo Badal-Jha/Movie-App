@@ -13,7 +13,7 @@ poster.addEventListener("mouseenter", (e) => {
 
   const quote = document.querySelector(".quotes");
   const val = Math.trunc(Math.random() * 9) + 1;
-  console.log(val);
+
   quote.src = "images/quote-" + val + ".jpg";
 });
 
@@ -37,13 +37,11 @@ function createPoster(data) {
   const movieBlock = createMovieContainer(movies);
 
   movieSearchable.appendChild(movieBlock);
-
-  console.log("Data", data);
 }
 
 //movies section
 function moviesSection(movies) {
-  console.log(movies);
+  // console.log(movies);
   return movies.map((movie) => {
     if (movie.poster_path)
       return `<img src=${IMG_URL + movie.poster_path} data-movie-id=${
@@ -66,14 +64,12 @@ function moviesSection(movies) {
 
 //overview review
 function overview(movie) {
-  console.log(movie.overview.length);
   if (movie.overview.length < 600) {
     return `<p class="overview">${movie.overview}</p>`;
   } else return `<p class="overview">watch the trailer for the overview</p>`;
 }
 //create movie contaner
 function createMovieContainer(movies, title = "") {
-  console.log("now", movies);
   const movieElement = document.createElement("div");
   movieElement.setAttribute("class", "movie");
 
@@ -193,7 +189,7 @@ function getMovies(path, title) {
   fetch(newUrl)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
 
       getPoster(data, title);
     })
