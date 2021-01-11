@@ -33,6 +33,7 @@ function generateUrl(path) {
 function createPoster(data) {
   movieSearchable.innerHTML = "";
   const movies = data.results;
+
   const movieBlock = createMovieContainer(movies);
 
   movieSearchable.appendChild(movieBlock);
@@ -42,30 +43,51 @@ function createPoster(data) {
 
 //movies section
 function moviesSection(movies) {
+  console.log(movies);
   return movies.map((movie) => {
     if (movie.poster_path)
       return `<img src=${IMG_URL + movie.poster_path} data-movie-id=${
         movie.id
-      } class="poster-image"/>`;
+      } class="poster-image"/>
+      <div class="overview"><h2>Overview</h2>${overview(movie)}
+      <p><span class="movieInfo">Title: </span>${movie.title}</p>
+       </p><span class="movieInfo">Release Date: </span>${
+         movie.release_date
+       }</p>
+       
+      <p><span class="movieInfo">Popularity: </span>${movie.popularity}</p>
+       <p><span class="movieInfo">Rating: </span>${movie.vote_average}</p>
+      
+
+      </div>`;
   });
 }
 
+//overview review
+function overview(movie) {
+  console.log(movie.overview.length);
+  if (movie.overview.length < 600) {
+    return `<p class="overview">${movie.overview}</p>`;
+  } else return `<p class="overview">watch the trailer for the overview</p>`;
+}
 //create movie contaner
 function createMovieContainer(movies, title = "") {
+  console.log("now", movies);
   const movieElement = document.createElement("div");
   movieElement.setAttribute("class", "movie");
 
-  const movieTemplate = `
+  var movieTemplate = `
   <h2 id="title">${title}</h2>
   <section class="section">
-      ${moviesSection(movies)}  ;  
+    ${moviesSection(movies)}
   </section>
   <div class="content">
-  <button class="close-btn">X</button>
+  <button class="close-btn ">X</button>
+  
   </div>`;
-
   movieElement.innerHTML = movieTemplate;
   console.log(movieElement);
+
   return movieElement;
 }
 
@@ -99,9 +121,9 @@ function createIfram(video) {
   ifram.allowFullscreen = true;
   return ifram;
 }
-//creat video template
+
 function videoTemplate(data, content) {
-  content.innerHTML = `<button class="close-btn">X</button>`; //overwrite everthing each time we click a video
+  // content.innerHTML = `<button class="close-btn">X</button>`; //overwrite everthing each time we click a video
   console.log("videos", data);
   const videos = data.results;
   const length = videos.length > 4 ? 4 : videos.length;
@@ -120,6 +142,7 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".poster-image")) {
     const section = e.target.parentElement; //parentElement give parent element of target
     const content = section.nextElementSibling; //nextElementSibling give next sibling Element of target
+
     console.log("Events", e);
     //take movie id from dom
     const movieId = e.target.dataset.movieId;
@@ -170,6 +193,7 @@ function getMovies(path, title) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+
       getPoster(data, title);
     })
     .catch((error) => {
@@ -182,5 +206,3 @@ getMovies(`/movie/popular`, "Popular Movies");
 
 getMovies(`/movie/top_rated`, "Top Rated  Movies");
 getMovies(`/movie/now_playing`, "Now playing in Theater");
-
-//Reviews of movies

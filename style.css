@@ -11,7 +11,7 @@ body {
 .container img {
   margin-top: 10px;
   margin-right: 40px;
-  border-radius: 40px;
+  border-radius: 50px;
   width: 70px;
   height: 70px;
 }
@@ -115,11 +115,12 @@ body {
   cursor: pointer;
   margin: 20px;
   width: 280px;
+  height: 430px;
 }
 .section img:hover {
   margin: 0 20px;
   /* increase the size of image without affecting others */
-  transform: scale(1.2);
+  transform: scale(1.1);
   /* transform: rotateY(180deg); to rotate image 180 degree */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -144,6 +145,9 @@ body {
 .close-btn {
   cursor: pointer;
 }
+.hidden {
+  display: none;
+}
 .display {
   display: block;
 }
@@ -153,4 +157,20 @@ body {
   font-family: "Pirata One", cursive;
   font-size: 30px;
   color: white;
+}
+.overview {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+
+  display: block;
+  color: white;
+  justify-content: end;
+  width: 280px;
+}
+.overview h2 {
+  color: red;
+}
+.movieInfo {
+  letter-spacing: 1px;
+  font-weight: bold;
 }
