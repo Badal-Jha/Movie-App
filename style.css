@@ -92,6 +92,7 @@ body {
 }
 
 .second {
+  justify-content: right;
   border-radius: 5px;
   padding: 0;
   opacity: 0.9;
@@ -116,11 +117,12 @@ body {
   margin: 20px;
   width: 280px;
   height: 430px;
+  transition: transform 1s ease 50ms;
 }
 .section img:hover {
   margin: 0 20px;
   /* increase the size of image without affecting others */
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(360deg);
   /* transform: rotateY(180deg); to rotate image 180 degree */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
